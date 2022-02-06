@@ -1,2 +1,2 @@
 # codeJamNavigation
-Pathfinding project with Opr and Wilq
+Pathfinding project with Opr and Wilq for PythonSimplified CodeJam2022
