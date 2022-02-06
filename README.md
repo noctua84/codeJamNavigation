@@ -16,3 +16,6 @@ their marking criteria:
 9. clear README documentation - please make sure you give us a briefing of your project along with the roles that each team member had (otherwise we can grade your teamwork at criteria 8 😉)
 10. clever control flow - smart use of conditional statements and loops
 11. EFFORT!!!
+
+
+Source victory conditions: Discord, cj-general PERSISTENTxMF, 21:24 on 06.02.22
