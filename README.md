@@ -1,5 +1,5 @@
 # codeJamNavigation
-Pathfinding project with PéterC(Opr) and Wilq for PythonSimplified CodeJam2022
+Pathfinding project with Opr and Wilq for PythonSimplified CodeJam2022
 
 
 ⚠️ TO WIN THIS CODE JAM ⚠️
