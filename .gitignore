@@ -1,2 +1,5 @@
 # ide related:
 .idea/
+
+# environment:
+venv
