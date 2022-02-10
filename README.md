@@ -19,4 +19,3 @@ their marking criteria:
 
 
 Source victory conditions: Discord, cj-general PERSISTENTxMF, 21:24 on 06.02.22
-test
