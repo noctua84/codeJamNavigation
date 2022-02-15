@@ -1,5 +1,5 @@
 # codeJamNavigation
-Pathfinding project with Opr and Wilq for PythonSimplified CodeJam2022
+Pathfinding project with Opr, Wilq, Magus and Nimora for PythonSimplified CodeJam2022
 
 
 ⚠️ TO WIN THIS CODE JAM ⚠️
@@ -19,3 +19,5 @@ their marking criteria:
 
 
 Source victory conditions: Discord, cj-general PERSISTENTxMF, 21:24 on 06.02.22
+
+# Project description
