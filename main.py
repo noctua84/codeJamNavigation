@@ -3,11 +3,7 @@ import sys
 import pygame
 from pygame.locals import KEYDOWN, K_q
 
-import numpy as np
-import maze_generator
-
-# constants:
-from node import Node
+from maze import Maze
 
 ROWS = 10
 BLACK = (0, 0, 0)
@@ -15,20 +11,20 @@ GREY = (160, 160, 160)
 
 
 # main loop:
-def main(window_width, initial_maze):
+def main(window_width, maze: Maze):
     pygame.init()
     window = pygame.display.set_mode((window_width, window_width))
     
     while True:
         check_events()
         window.fill(GREY)
-        cur_grid = make_maze_elements(window_width, initial_maze)
+        cur_grid = maze.maze
         
         for row in cur_grid:
             for node in row:
                 node.draw_node(window)
         
-        draw_grid_lines(window, window_width, initial_maze)
+        draw_grid_lines(window, window_width, maze)
         pygame.display.update()
 
 
@@ -42,23 +38,7 @@ def check_events():
             sys.exit()
 
 
-# populate the grid with nodes to be used by the traversal algorithm
-def make_maze_elements(element_width, maze):
-    grid = []
-    gap = element_width // maze.shape[0] + 1
-    for row in range(maze.shape[0]):
-        grid.append([])
-        for col in range(maze.shape[1]):
-            node = Node(row, col, gap, maze.shape[0], GREY)
-            if maze[row, col] == 1:
-                node.change_type("wall")
-            
-            grid[row].append(node)
-    
-    return grid
-
-
-# outline the grid elements:
+# outline the __grid elements:
 def draw_grid_lines(win, element_width, maze):
     gap = element_width // maze.shape[0] + 1
     for row in range(maze.shape[0]):
@@ -72,15 +52,8 @@ if __name__ == '__main__':
     width = 800
     
     # prepare maze
-    maze_map = np.random.binomial(1, 0.5, (ROWS, ROWS))
-    first_row = maze_map[0]
-    first_row[first_row == 1] = 0
+    cur_maze = Maze(1, 0.5, ROWS)
+    cur_maze.create_maze(width)
+    cur_maze.set_start_and_end()
     
-    maze_map[0] = first_row
-    
-    for i in range(1, ROWS):
-        maze_map[i, ROWS - 1] = 1
-    
-    generated_maze = maze_generator.carve_maze(maze_map, ROWS)
-    
-    main(width, generated_maze)
+    main(width, cur_maze)

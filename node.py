@@ -2,7 +2,8 @@ import pygame
 
 
 class Node:
-    def __init__(self, row, col, width, total_rows, color):
+    def __init__(self, row, col, width, total_rows, color, node_id):
+        self.node_id = node_id
         self.row = row
         self.col = col
         self.width = width
@@ -47,4 +48,3 @@ class Node:
     
     def draw_node(self, win):
         pygame.draw.rect(win, self.node_color, (self.x, self.y, self.width, self.width))
-

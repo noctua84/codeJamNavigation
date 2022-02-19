@@ -21,3 +21,5 @@ their marking criteria:
 Source victory conditions: Discord, cj-general PERSISTENTxMF, 21:24 on 06.02.22
 
 # Project description
+Currently, you can start the program and will get a maze with a viewable randomized start-node and end-node.  
+The actual traversal algorithm, a behind the sceenes graph creation and an edge-list generation (node-neigbors) is missing.  
